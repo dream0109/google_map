@@ -23,7 +23,7 @@ function PlaceDetails(props) {
                 console.log(place);
             }
         });
-    }, []);
+    }, [props.placeId]);
 
     return (
         <>

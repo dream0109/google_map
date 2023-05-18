@@ -12,7 +12,7 @@ const SearchPlaces = ({ google, countryCode, stateCode, city, location }) => {
         fetchData();
     }, []);
     const fetchData = () => {
-        const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(city)},+${encodeURIComponent(stateCode)}&key=${process.env.REACT_APP_API_KEY}`;
+        const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(city)}&key=${process.env.REACT_APP_API_KEY}`;
         // Make the API request
         fetch(apiUrl)
             .then(response => response.json())
@@ -36,7 +36,7 @@ const SearchPlaces = ({ google, countryCode, stateCode, city, location }) => {
         const request = {
             location: { lat, lng },
             radius: 1000,
-            query: `car insurance in ${st.name} ${city}`,
+            query: `car insurance in ${city} ${st.name}`,
             fields: ['name', 'geometry', 'place_id'],
             componentRestrictions: {
                 country: countryCode,

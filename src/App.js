@@ -2,21 +2,17 @@ import './App.css';
 import States from './components/States';
 import Cities from './components/Cities';
 import {
-  BrowserRouter as Router,
   Routes,
-  Route,
-  useLocation
+  Route
 } from "react-router-dom";
 import SearchResults from './components/SearchResults';
 import Place from './components/Place';
-import ZipCode from './components/ZipCode';
 import Footer from './components/Footer';
 import { Stack } from '@mui/material';
 import Header from './components/Header';
 
 
 function App() {
-  const location = useLocation()
   return (
     <div className='App'>
       <div>

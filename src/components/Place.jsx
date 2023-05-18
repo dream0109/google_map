@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleApiWrapper } from "google-maps-react";
 import PlaceDetails from "./PlaceDetails";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 function Place(props) {
   const location = useLocation();
   return (
